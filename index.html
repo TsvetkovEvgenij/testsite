@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Тестовый сайт</title>
+  <!-- Код Яндекс Метрики (вставьте ваш код счетчика сюда) -->
+  <script type="text/javascript">
+    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+    m[i].l=1*new Date();
+    for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src.indexOf(t) > -1) {k=document.scripts[j];break;}}
+    a=e.createElement(r),a.async=1,a.src=t+(k&&k.src.indexOf('userInfo')>-1?'&userInfo=1':'');e.getElementsByTagName('head')[0].appendChild(a);})
+    (window, document, 'https://mc.yandex.ru/metrika/tag.js', 'script', 'ym');
+
+    ym(XXXXXX, 'init', {
+      clickmap: true,
+      trackLinks: true,
+      accurateTrackBounce: true,
+      webvisor: true
+    });
+  </script>
+  <noscript><div><img src="https://mc.yandex.ru/watch/XXXXXX" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+  <!-- Конец кода Яндекс Метрики -->
+</head>
+<body>
+  <h1>Добро пожаловать на тестовый сайт!</h1>
+  <button onclick="ym(XXXXXX, 'reachGoal', 'click_button')">Отправить заявку</button>
+  <form onsubmit="sendFormGoal(); return false;">
+    <input type="text" name="name" placeholder="Ваше имя" required>
+    <input type="submit" value="Отправить">
+  </form>
+  <script>
+    function sendFormGoal() {
+      ym(XXXXXX, 'reachGoal', 'form_submit');
+      alert('Форма отправлена!');
+    }
+  </script>
+</body>
+</html>
